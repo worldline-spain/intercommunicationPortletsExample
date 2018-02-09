@@ -1,0 +1,13 @@
+<div class="ui-g">
+    <div *ngIf="showInput" class="ui-g-12 ui-md-6 align-row-center">
+        <div class="ui-g">
+            <h5 class="first">Some text to share:</h5>
+        </div>
+        <div class="ui-g">
+            <input type="text" pInputText [(ngModel)]="text">
+        </div>
+        <div class="ui-g">
+            <button pButton type="button" (click)="shareData()" label="Share" class="ui-button-warning button"></button>
+        </div>
+    </div>
+</div>

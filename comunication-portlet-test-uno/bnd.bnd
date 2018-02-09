@@ -1,0 +1,5 @@
+Bundle-Name: comunication-portlet-test-uno
+Bundle-SymbolicName: comunication.portlet.test.uno
+Bundle-Version: 1.0.0
+Export-Package: comunication.portlet.test.uno.constants
+Web-ContextPath: /comunication-portlet-test-uno

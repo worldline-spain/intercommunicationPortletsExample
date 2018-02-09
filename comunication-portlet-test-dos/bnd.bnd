@@ -1,0 +1,5 @@
+Bundle-Name: comunication-portlet-test-dos
+Bundle-SymbolicName: comunication.portlet.test.dos
+Bundle-Version: 1.0.0
+Export-Package: comunication.portlet.test.dos.constants
+Web-ContextPath: /comunication-portlet-test-dos
