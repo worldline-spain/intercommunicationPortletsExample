@@ -17,20 +17,18 @@ define(["require", "exports", "@angular/core"], function (require, exports, core
             this.applicationRef = applicationRef;
             /* Variables */
             this.showInput = true;
-            console.log(Liferay);
         }
         /* Angular Lifecycle */
         AppComponent.prototype.ngOnInit = function () {
             var _this = this;
             /* Liferay events */
             Liferay.on('onToggleComunicationPortletTestDosEvent', function () {
-                console.log('entro evento de portlet test uno');
                 _this._onToggleEvent();
             });
+            this._getUserLiferay();
         };
         /* Component public functions */
         AppComponent.prototype.shareData = function () {
-            console.log('Boton test uno');
             // Data to share
             var sharedData = {
                 sharedText: this.text
@@ -47,6 +45,9 @@ define(["require", "exports", "@angular/core"], function (require, exports, core
              * that have changed get propagated to the DOM
              */
             this._propagateEventToDOM();
+        };
+        AppComponent.prototype._getUserLiferay = function () {
+            this.liferayUserName = Liferay.ThemeDisplay.getUserName();
         };
         AppComponent.prototype._propagateEventToDOM = function () {
             this.applicationRef.tick();

@@ -1,5 +1,8 @@
 <div class="ui-g">
     <div *ngIf="showInput" class="ui-g-12 ui-md-6 align-row-center">
+        <div class="ui-g" *ngIf="liferayUserName">
+            Welcome, {{liferayUserName}}
+        </div>
         <div class="ui-g">
             <h5 class="first">Some text to share:</h5>
         </div>

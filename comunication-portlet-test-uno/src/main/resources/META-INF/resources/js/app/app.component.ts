@@ -15,6 +15,7 @@ export class AppComponent implements OnInit {
 	/* Variables */
 	showInput: boolean = true;
 	text: string;
+	liferayUserName:string;
 
 	/* Component constructor */
 	constructor(
@@ -27,6 +28,7 @@ export class AppComponent implements OnInit {
 		Liferay.on('onToggleComunicationPortletTestDosEvent', () => {
 			this._onToggleEvent();
 		});
+		this._getUserLiferay();
 	}
 
 	/* Component public functions */
@@ -49,6 +51,11 @@ export class AppComponent implements OnInit {
 		 * that have changed get propagated to the DOM 
 		 */
 		this._propagateEventToDOM();
+	}
+
+	_getUserLiferay() {
+		//Get user loged from Liferay platform
+		this.liferayUserName = Liferay.ThemeDisplay.getUserName();
 	}
 
 	_propagateEventToDOM() {
